@@ -1,1 +1,2 @@
 # SkeletonMultiplatform
+I have started to take an interest in Kotlin Multiplatform and Compose Multiplatform over the past half year (July 2024). The reason of this project is to demonstrate the arhitecture and key features of Compose Multipatform through an application. I intend to keep the application up to date by implementing updates and adding new features whenever Compose Multiplatform introduces new solutions or major changes.
