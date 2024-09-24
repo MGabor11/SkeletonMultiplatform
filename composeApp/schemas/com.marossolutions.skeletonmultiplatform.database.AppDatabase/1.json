@@ -1,0 +1,96 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "f7f308c46a162e6e2ac6463bd202fa56",
+    "entities": [
+      {
+        "tableName": "airport",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`icao` TEXT NOT NULL, `name` TEXT NOT NULL, `country` TEXT NOT NULL, `city` TEXT NOT NULL, `latitude` TEXT NOT NULL, `longitude` TEXT NOT NULL, `timezone` TEXT NOT NULL, PRIMARY KEY(`icao`))",
+        "fields": [
+          {
+            "fieldPath": "icao",
+            "columnName": "icao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timezone",
+            "columnName": "timezone",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "icao"
+          ]
+        }
+      },
+      {
+        "tableName": "airline",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`icao` TEXT NOT NULL, `name` TEXT NOT NULL, `logoUrl` TEXT, PRIMARY KEY(`icao`))",
+        "fields": [
+          {
+            "fieldPath": "icao",
+            "columnName": "icao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logoUrl",
+            "columnName": "logoUrl",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "icao"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f7f308c46a162e6e2ac6463bd202fa56')"
+    ]
+  }
+}
